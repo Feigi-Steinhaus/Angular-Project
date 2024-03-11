@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.container {
+    align-items: center;
+    margin-top: 40px;
+    height: auto;
+    width: 100%;
+    background-color: rgba(232, 229, 229, 0.659);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 80%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.text {
+    align-items: center;
+    border-bottom: rgb(45, 198, 73) 5px solid;
+    display: inline-block;
+    padding: 20px;
+    font-size: x-large;
+}

@@ -1,0 +1,64 @@
+<div class="container">
+  <br><br>
+  <div class="txt">
+    <div class="text-container">
+      <span class="text">All-Trips</span>
+    </div>
+    <br>
+
+    <mat-form-field>
+      <mat-label>Choose a trip type</mat-label>
+      <mat-select [(ngModel)]="selectedType" (selectionChange)="filter(selectedType)">
+        <mat-option *ngFor="let a of tripTypes" [value]="a.typeCode">{{a.typeName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="this.a.isManager">
+      <mat-label>Choose a trip time</mat-label>
+      <mat-select [(ngModel)]="selectedTime" (selectionChange)="filterTime(selectedTime)">
+        <mat-option value="1">Future trips</mat-option>
+        <mat-option value="2">Trips from the past</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Choose how to sort</mat-label>
+      <mat-select [(ngModel)]="sort" (selectionChange)="sortTrips(sort)">
+        <mat-option value="1">Sort by type of trip</mat-option>
+        <mat-option value="2">Sort by trip price</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="trip-container">
+      <div *ngFor="let p of filterTrips">
+        <mat-card class="example-card card">
+          <mat-card-header>
+            <mat-card-title-group>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{p.typeName}}</mat-card-title>
+              <mat-card-subtitle>{{p.tripDestination}}</mat-card-subtitle>
+            </mat-card-title-group>
+            <mat-card-title class="code">{{p.tripCode}}</mat-card-title>
+          </mat-card-header>
+
+          <ng-container *ngIf="p.photo === null; else receivedImage">
+            <img mat-card-image [src]="a.basePic" alt="Default Image">
+          </ng-container>
+
+          <ng-template #receivedImage>
+            <img mat-card-image [src]="a.baseRoute+'/'+p.photo+'.png'" alt="Received Image">
+          </ng-template>
+          <br>
+          <mat-card-content>
+            <p>{{p.tripDate | date:'dd MMMM yyyy'}}</p>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <button mat-button (click)="moreDetails(p.tripCode!)">More details</button>
+            <button mat-button *ngIf="isCancle(p.tripCode!)" (click)="cancle(p.tripCode!)">Unsubscribe</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

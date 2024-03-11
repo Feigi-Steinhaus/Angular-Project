@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="txt">
+        <div class="text-container">
+            <span *ngIf="!this.a.isConnected" class="text">הרשמה</span>
+            <span *ngIf="this.a.isConnected" class="text">עריכת פרטי משתמש</span>
+        </div>
+        <br>
+        <form [formGroup]="myForm">
+            <mat-form-field class="inp">
+                <mat-label>First name*</mat-label>
+                <input matInput formControlName="firstName" [(ngModel)]="newUser.firstName">
+            </mat-form-field>
+            <div *ngIf="myFN.invalid && (myFN.touched||myFN.dirty)">
+                <p class="message" *ngIf="myFN.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myFN.hasError('min')">The input is too short</p>
+                <p class="message" *ngIf="myFN.hasError('notvalid')">The name must contain only letters</p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Last name*</mat-label>
+                <input matInput formControlName="lastName" [(ngModel)]="newUser.lastName">
+            </mat-form-field>
+            <div *ngIf="myLN.invalid && (myLN.touched||myLN.dirty)">
+                <p class="message" *ngIf="myLN.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myLN.hasError('min')">The input is too short</p>
+                <p class="message" *ngIf="myLN.hasError('notvalid')">The name must contain only letters</p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Phone number</mat-label>
+                <input matInput formControlName="phone" [(ngModel)]="newUser.phone">
+            </mat-form-field>
+            <div *ngIf="myPhone.invalid && (myPhone.touched||myPhone.dirty)">
+                <p class="message" *ngIf="myPhone.hasError('required')">Required field</p>
+                <p class="message" *ngIf="myPhone.hasError('minlength')">Wrong number</p>
+                <p class="message" *ngIf="myPhone.hasError('maxlength')">Wrong number</p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Email address*</mat-label>
+                <input matInput formControlName="email" [(ngModel)]="newUser.email">
+            </mat-form-field>
+            <div *ngIf="myMail.invalid && (myMail.touched||myMail.dirty)">
+                <p class="message" *ngIf="myMail.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myMail.hasError('notvalid')">Incorrect email address</p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Password*</mat-label>
+                <input matInput type="password" formControlName="pass" [(ngModel)]="newUser.password">
+            </mat-form-field>
+            <div *ngIf="myPass.invalid && (myPass.touched||myPass.dirty)">
+                <p class="message" *ngIf="myPass.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myPass.hasError('min')">The input is too short</p>
+                <p class="message" *ngIf="myPass.hasError('notvalid')">The password must contain:
+                    an uppercase letter,<br> a lowercase letter , and some character
+                </p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Password Authentication*</mat-label>
+                <input matInput type="password" formControlName="passValidation" [(ngModel)]="passValidation">
+            </mat-form-field>
+            <div *ngIf="myPassV.invalid && (myPassV.touched||myPassV.dirty)">
+                <p class="message" *ngIf="myPassV.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myPassV.hasError('notvalid')">Authentication failed</p>
+            </div>
+            <br>
+            <p><mat-checkbox color="red" formControlName="isMedic" [(ngModel)]="newUser.firstAidCertificate">
+                    Do you hold a first aid certificate?
+                </mat-checkbox></p>
+            <button mat-fab extended color="warn" *ngIf="!this.open" [disabled]="myForm.invalid" (click)="send()">
+                הרשמה
+            </button>
+            <button class="btn" mat-fab extended color="warn" *ngIf="this.open"
+                [disabled]="myForm.invalid">
+                שמירת שינויים
+            </button>
+        </form>
+        <button class="btn" mat-fab extended color="warn" *ngIf="this.open" (click)="deleteUser()">
+            הסרה מהאתר
+        </button>
+    </div>
+    <div class="pic">
+        <img src="../../../assets/logo.png" width="500px">
+    </div>
+</div>

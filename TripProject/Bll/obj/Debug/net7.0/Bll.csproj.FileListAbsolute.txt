@@ -1,0 +1,17 @@
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\Bll.deps.json
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\Bll.dll
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\Bll.pdb
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\Dal.dll
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\DTO.dll
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\Dal.pdb
+D:\Angular\פרוייקט\TripProject\Bll\bin\Debug\net7.0\DTO.pdb
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.csproj.AssemblyReference.cache
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.AssemblyInfoInputs.cache
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.AssemblyInfo.cs
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.csproj.CoreCompileInputs.cache
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.csproj.CopyComplete
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.dll
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\refint\Bll.dll
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\Bll.pdb
+D:\Angular\פרוייקט\TripProject\Bll\obj\Debug\net7.0\ref\Bll.dll

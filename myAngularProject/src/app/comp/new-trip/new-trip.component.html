@@ -1,0 +1,48 @@
+<div class="text-container">
+    <span class="text">New-Trip</span>
+  </div>
+<form (ngSubmit)="send()" [formGroup]="myForm">
+    <input type="text" placeholder="הכנס יעד" formControlName="tripDestination" [(ngModel)]="newTrip.tripDestination">
+    <div *ngIf="myDes.invalid && (myDes.touched||myDes.dirty)">
+        <p *ngIf="myDes.hasError('required')">שדה חובה</p>
+    </div>
+    <br>
+    <input type="date" placeholder="הכנס תאריך" formControlName="tripDate" [(ngModel)]="newTrip.tripDate">
+    <div *ngIf="myDate.invalid && (myDate.touched||myDate.dirty)">
+        <p *ngIf="myDate.hasError('required')">שדה חובה</p>
+    </div>
+    <br>
+    <input type="time" placeholder="הכנס שעת יציאה" formControlName="departureTime"
+        [(ngModel)]="newTrip.departureTime">
+    <div *ngIf="myTime.invalid && (myTime.touched||myTime.dirty)">
+        <p *ngIf="myTime.hasError('required')">שדה חובה</p>
+    </div>
+    <br>
+    <br>
+    <input type="number" placeholder="הכנס משך זמן" formControlName="durationHours"
+        [(ngModel)]="newTrip.tripDurationHours">
+    <div *ngIf="myHours.invalid && (myHours.touched||myHours.dirty)">
+        <p *ngIf="myHours.hasError('required')">שדה חובה</p>
+        <p *ngIf="myHours.hasError('min')">מספר לא תקין</p>
+    </div>
+    <br>
+    <br>
+    <input type="number" placeholder="מספר מקומות פנויים" formControlName="availablePlaces"
+        [(ngModel)]="newTrip.availablePlaces">
+    <div *ngIf="myPlaces.invalid && (myPlaces.touched||myPlaces.dirty)">
+        <p *ngIf="myPlaces.hasError('required')">שדה חובה</p>
+        <p *ngIf="myPlaces.hasError('min')">מספר לא תקין</p>
+    </div>
+    <br>
+    <br>
+    <input type="number" placeholder="הכנס מחיר" formControlName="price" [(ngModel)]="newTrip.price">
+    <div *ngIf="myPrice.invalid && (myPrice.touched||myPrice.dirty)">
+        <p *ngIf="myPrice.hasError('required')">שדה חובה</p>
+        <p *ngIf="myPrice.hasError('min')">מספר לא תקין</p>
+    </div>
+    <br>
+    <input type="file" placeholder="בחר תמונה" [(ngModel)]="newTrip.photo">
+    <br>
+    <!-- <input type="submit" [disabled]="myForm.invalid"> -->
+    <input type="submit">
+</form>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="txt">
+        <div class="text-container">
+            <span class="text">Connection</span>
+        </div>
+        <br>
+        <form (ngSubmit)="send()" [formGroup]="myForm">
+            <mat-form-field class="inp">
+                <mat-label>Email address</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <div *ngIf="myName.invalid && (myName.touched||myName.dirty)">
+                <p class="message" *ngIf="myName.hasError('required')">Required field</p>
+                <p class="message" *ngIf="myName.hasError('notvalid')">Incorrect email address</p>
+            </div>
+            <br>
+            <mat-form-field class="inp">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="pass">
+            </mat-form-field>
+            <div *ngIf="myPass.invalid && (myPass.touched||myPass.dirty)">
+                <p class="message" *ngIf="myPass.hasError('required')">Required field</p>
+            </div>
+            <br>
+            <button mat-fab extended color="warn" type="submit" [disabled]="myForm.invalid">
+                Connection
+            </button>
+        </form>
+        <p *ngIf="connected">The connection failed</p>
+    </div>
+    <div class="pic">
+        <img src="../../../assets/logo.png" width="500px">
+    </div>
+</div>

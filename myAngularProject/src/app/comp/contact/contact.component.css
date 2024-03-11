@@ -1,0 +1,74 @@
+/* עיצוב הקומפוננטה */
+.container {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(232, 229, 229, 0.848);
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+        'txt pic'
+        'txt pic';
+    /* grid-gap: 10px; */
+    justify-content: center;
+    grid-template-columns: 40% 30%;
+    flex-wrap: wrap;
+}
+
+/* עיצוב הטקסט */
+.txt {
+    text-align: center;
+    align-items: center;
+    grid-area: txt;
+    display: inline-block;
+}
+
+/* עיצוב התמונה */
+.pic {
+    /* object-fit: cover; */
+    text-align: center;
+    align-items: center;
+    grid-area: pic;
+}
+
+/* עיצוב הקלט */
+.inp {
+    margin: 10px;
+    width: 240px;
+}
+
+.inp2 {
+    width: 500px;
+}
+
+.inp3 {
+    width: 500px;
+    height: 200px;
+}
+
+/* עיצוב הכפתורים */
+.example-button-row button,
+.example-button-row a {
+    margin-right: 8px;
+}
+
+.example-disabled {
+    display: inline-block;
+}
+
+/* עיצוב הכותרת */
+.text {
+    align-items: center;
+    border-bottom: rgb(45, 198, 73) 5px solid;
+    display: inline-block;
+    padding: 20px;
+    font-size: x-large;
+}
+
+/* עיצוב הטופס */
+form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}

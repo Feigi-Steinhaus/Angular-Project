@@ -1,0 +1,7 @@
+.text {
+    align-items: center;
+    border-bottom: rgb(45, 198, 73) 5px solid;
+    display: inline-block;
+    padding: 20px;
+    font-size: x-large;
+}

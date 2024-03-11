@@ -1,0 +1,17 @@
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\DTO.deps.json
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\DTO.dll
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\DTO.pdb
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.dll
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\refint\DTO.dll
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.pdb
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\ref\DTO.dll
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\DTO.runtimeconfig.json
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.genruntimeconfig.cache
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\Dal.dll
+D:\Angular\פרוייקט\TripProject\DTO\bin\Debug\net7.0\Dal.pdb
+D:\Angular\פרוייקט\TripProject\DTO\obj\Debug\net7.0\DTO.csproj.CopyComplete

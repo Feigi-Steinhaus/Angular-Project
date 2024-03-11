@@ -1,0 +1,33 @@
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a *ngIf="!this.a.isManager" routerLink="SignIn" class="nav-link active"
+                data-bs-toggle="tab">הרשמה</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="Home" class="nav-link" data-bs-toggle="tab">דף הבית</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="LogIn" *ngIf="!this.a.isManager" class="nav-link" data-bs-toggle="tab">התחברות</a>
+            <a *ngIf="this.a.isManager" routerLink="Users" class="nav-link" data-bs-toggle="tab">משתמשים</a>
+        </li>
+        <li class="nav-item">
+            <!-- <a routerLink="Trips" class="nav-link" data-bs-toggle="tab">Trips</a> -->
+            <a href="#trips" class="nav-link" data-bs-toggle="tab">טיולים</a>
+        </li>
+        <li class="nav-item">
+            <a *ngIf="this.a.isConnected && !this.a.isManager" class="nav-link" data-bs-toggle="tab"
+                [matMenuTriggerFor]="menu">{{this.currentUser.firstName}}</a>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="details()">עריכת פרטי משתמש</button>
+                <button mat-menu-item (click)="myTrips()">הטיולים שלי</button>
+                <button mat-menu-item (click)="disconnect()">התנתקות</button>
+            </mat-menu>
+            <a *ngIf="this.a.isConnected && this.a.isManager" class="nav-link" data-bs-toggle="tab"
+                [matMenuTriggerFor]="menuM">מנהל</a>
+            <mat-menu #menuM="matMenu">
+                <button mat-menu-item (click)="disconnect()">התנתקות</button>
+            </mat-menu>
+        </li>
+    </ul>
+</div>

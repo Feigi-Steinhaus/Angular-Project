@@ -1,0 +1,64 @@
+<mat-card class="examdatale-card card">
+
+    <ng-container *ngIf="data.photo === null; else receivedImage">
+        <img mat-card-image [src]="a.basePic" alt="Default Image">
+    </ng-container>
+
+    <ng-template #receivedImage>
+        <img mat-card-image [src]="a.baseRoute+'/'+data.photo+'.png'" alt="Received Image">
+    </ng-template>
+    <br>
+
+    <mat-card-content>
+        <data>
+            <h2><b>{{data.tripDestination}}</b></h2>
+        </data>
+    </mat-card-content>
+    <mat-card-content>
+        <data>
+            <p>{{data.tripDate | date:'dd MMMM'}}</p>
+        </data>
+    </mat-card-content>
+    <br>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><b>Date: </b> {{data.tripDate | date:'dd MMMM yyyy'}} </td>
+                <td><b>Price: </b> {{data.price}}</td>
+            </tr>
+            <tr>
+                <td><b>TripDurationHours: </b> {{data.tripDurationHours}}</td>
+                <td><b>AvailablePlaces: </b>{{data.availablePlaces}}</td>
+            </tr>
+            <tr>
+                <td><b>DepartureTime: </b>{{data.departureTime}}</td>
+                <td><b>TypeName: </b>{{data.typeName}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="this.open">
+        <form [formGroup]="myForm">
+            <mat-form-field class="inp">
+                <mat-label>Number of places</mat-label>
+                <input matInput formControlName="count">
+            </mat-form-field>
+
+            <div *ngIf="myCount.invalid && (myCount.touched||myCount.dirty)">
+                <p class="message" *ngIf="myCount.hasError('req')">Required field</p>
+                <p class="message" *ngIf="myCount.hasError('min')">Error in order details</p>
+                <p class="message" *ngIf="myCount.hasError('max')">There is not enough space on this trip</p>
+            </div>
+            <br>
+            <button mat-button (click)="addBooking()" [disabled]="myForm.invalid">Order</button>
+        </form>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-button *ngIf="!open && a.isConnected" (click)="openOrder()">Order</button>
+    </div>
+
+</mat-card>
+
+<button mat-button mat-dialog-close class="close-button">Close</button>

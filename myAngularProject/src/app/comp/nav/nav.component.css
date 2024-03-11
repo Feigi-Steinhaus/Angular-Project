@@ -1,0 +1,19 @@
+.nav {
+    text-align: center;
+    /* padding: 5px; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    margin-left: -15px;
+}
+
+.nav-item {
+    width: 10%;
+}
+
+.container{
+    width: 100%;
+    align-items: center;
+}

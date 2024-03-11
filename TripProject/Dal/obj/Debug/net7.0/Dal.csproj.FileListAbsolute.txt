@@ -1,0 +1,14 @@
+D:\Angular\פרוייקט\TripProject\Dal\bin\Debug\net7.0\Dal.deps.json
+D:\Angular\פרוייקט\TripProject\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+D:\Angular\פרוייקט\TripProject\Dal\bin\Debug\net7.0\Dal.dll
+D:\Angular\פרוייקט\TripProject\Dal\bin\Debug\net7.0\Dal.pdb
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.dll
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\refint\Dal.dll
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.pdb
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+D:\Angular\פרוייקט\TripProject\Dal\obj\Debug\net7.0\ref\Dal.dll

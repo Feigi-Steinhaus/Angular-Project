@@ -1,0 +1,40 @@
+.dialog {
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+}
+
+.details {
+    align-items: center;
+    text-align: center;
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.examdatale-card {
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+}
+
+.table {
+    text-align: left;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+.message {
+    margin: -20px;
+    color: red;
+    text-align: center;
+}
